@@ -6,7 +6,7 @@ categories: vpn
 ---
 
 # 1. Shadowsocks的简单介绍
-简单来说`Shadowsocks`（下文简称ss）就是一个vpn，基于`ssl协议`的vpn，ssl协议比较火的vpn还有`Openvpn`，不过Openvpn的协议特征太明显了，很容易就会被封掉了。Openvpn的场景更适合在国内使用，而国外翻墙毫无疑问我们选择ss。
+简单来说`Shadowsocks`（下文简称ss）就是一个vpn，基于`ssl协议`的vpn，ssl协议比较火的vpn还有`Openvpn`，不过Openvpn的协议特征太明显了，很容易就会被封掉了。Openvpn的场景更适合在国内使用，而国外翻墙毫无疑问我们选择ss。                                       
 > 对于ss的详细介绍可以看一下这篇文章 http://vc2tea.com/whats-shadowsocks/
 
 
@@ -225,7 +225,7 @@ case $1 in
 esac
 
 ```
-添加脚本`supervisord`开机自启动：
+　　添加脚本`supervisord`开机自启动：
 ```
 # chmod a+x /etc/init.d/supervisord
 # chkconfig --add supervisord
