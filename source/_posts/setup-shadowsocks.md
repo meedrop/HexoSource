@@ -13,7 +13,9 @@ categories: vpn
 # 2. 准备一台境外的VPS主机
 如何选择VPS可以参考知乎的讨论：[请问，国外或香港有哪些好用的 VPS 或者独立主机？](https://www.zhihu.com/question/21432244)
 几番挣扎最后我选择了[ramnode](http://www.ramnode.com/)这家的OpenVZ主机，可以通过paypal付款，购买的配置：`15美元/年`、`500G流量`、`128M内存/64M SWAP`、`12G SSD固态硬盘`、`西雅图地区`，截了一下价格表：
+
 ![ ](http://ofus5xwey.bkt.clouddn.com/ramnode.png)
+
 用了大概差不多一个月了，在周末晚上高峰时段会有点差，其余时间速度还不错，比较稳定的。
 > 对了这里要提一点：OpenVZ的主机是不支持ss一些修改系统内核参数等的提速方案的，如果你有这方面的要求，建议购买贵一点的KVM主机
 
@@ -38,7 +40,7 @@ Python 2.6.6
 ```
 # tar -xf setuptools-28.7.1.tar.gz 
 # cd setuptools-28.7.1
-# python setup.py instal
+# python setup.py install
 
 ```
 
@@ -47,7 +49,7 @@ Python 2.6.6
 ```
 # tar -xf pip-8.1.2.tar.gz 
 # cd pip-8.1.2
-# python setup.py instal
+# python setup.py install
 
 ```
 ## 3.3. 安装ss
@@ -109,7 +111,7 @@ Online help: <https://github.com/shadowsocks/shadowsocks>
 
 # 4. 让你的ss变得快速和稳定
 让ss变得稳定和快速要做三件事情：
->1. 安装supervisord
+>1. 安装supervisor
 >2. 给ss端口分流
 >3. 定期重启ss
 
