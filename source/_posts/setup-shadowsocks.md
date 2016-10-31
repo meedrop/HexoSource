@@ -143,10 +143,10 @@ supervisor也是一个进程，为了方便对这个进程的控制，我写了�
 # Description:    Start supervisord server daemon (supervisord).
 ### END INIT INFO
 
-PROC_NAME="supervisord"
-EXEC_USER=cfservice
-PYTHON="/usr/local/bin/python"
-SUPERVISORD="/usr/local/bin/supervisord"
+
+PROC_NAME="supervisord"	
+PYTHON="/usr/bin/python"
+SUPERVISORD="/usr/bin/supervisord"
 CONF="/etc/supervisord.conf"
 
 # 获取进程id模块
@@ -180,7 +180,7 @@ start(){
     if [ $PID == 0 ];then
 		echo "$PROC_NAME starting..."
 		if [ $UID == 0 ];then
-			su $EXEC_USER -c $PYTHON $SUPERVISORD -c $CONF
+			$PYTHON $SUPERVISORD -c $CONF
 		elif [ $(id | awk '{print $1}' | grep -c $EXEC_USER) == 1 ];then
 			$PYTHON $SUPERVISORD -c $CONF
 		else
