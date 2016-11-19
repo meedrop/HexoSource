@@ -144,9 +144,11 @@ supervisor也是一个进程，为了方便对这个进程的控制，我写了�
 ### END INIT INFO
 
 
+$BIN=$(which python | sed 's#/py.*$##g')
 PROC_NAME="supervisord"	
-PYTHON="/usr/bin/python"
-SUPERVISORD="/usr/bin/supervisord"
+PYTHON="$BIN/python"
+SUPERVISORD="$BIN/supervisord"
+SUPERVISORCTL="$BIN/supervisorctl"
 CONF="/etc/supervisord.conf"
 
 # 获取进程id模块
@@ -160,7 +162,8 @@ stop(){
 	get_pid
     if [ $PID != 0 ];then
 		echo "$PROC_NAME stopping..."
-        kill $PID
+        $SUPERVISORCTL stop all
+		kill $PID
         sleep 2s
         # 判断是否关闭成功，不成功强制kill
 		get_pid
