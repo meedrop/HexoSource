@@ -8,7 +8,7 @@ categories: vpn
 # 1. Shadowsocks的简单介绍
 简单来说`Shadowsocks`（下文简称ss）就是一个vpn，基于`ssl协议`的vpn，ssl协议比较火的vpn还有`Openvpn`，不过Openvpn的协议特征太明显了，很容易就会被封掉了。Openvpn的场景更适合在国内使用，而国外翻墙毫无疑问我们选择ss。                                       
 > 对于ss的详细介绍可以看一下这篇文章 http://vc2tea.com/whats-shadowsocks/
-
+<!--more-->
 
 # 2. 准备一台境外的VPS主机
 如何选择VPS可以参考知乎的讨论：[请问，国外或香港有哪些好用的 VPS 或者独立主机？](https://www.zhihu.com/question/21432244)
